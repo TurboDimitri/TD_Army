@@ -1,6 +1,8 @@
 # TD Design patterns 
 
+## Préambule
 Tout d'abord il est important de preciser que mon travail à été mis en commun avec Philéas Ballon jusqu'à l'implémentation des décorateurs.
+De plus, au CREMI l'extraction de l'archive a buggé j'ai donc mis en ligne sur un GitHub une version propre de mon code si l'archive bug pour vous aussi (création de classes vides) trouvable ici : https://github.com/TurboDimitri/TD_Army
 ## TD 5
 ### Décorateurs
 
