@@ -16,7 +16,7 @@ public class ProxyCavalier implements SoldatWithWeapon {
         return this.soldat.parer(force);
 
     }
-
+    //on s'assure qu'un soldat ne puisse porter qu'un seul exemplaire de chaque arme en utilisant les booléens de l'objet;
     public boolean addShield() {
         if (!bouclier) {
             this.soldat = new Bouclier(soldat);

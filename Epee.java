@@ -7,9 +7,10 @@ public class Epee extends DecorateurArme {
         this.durabilité = 100;
         this.soldat = soldat;
     }
-
+    //Les prints sont mis en commentaires pour éviter de flood la console mais on peut les ráctiver pour suivre le combat;
+    //Si l'arme est détruite alors on renvoie la force du soldat sans modificateur;
     public int force() {
-        if(getDurability() == 0){
+        if(isWeaponBroken()){
             return this.soldat.force();
         }
         this.durabilité--;
@@ -18,7 +19,7 @@ public class Epee extends DecorateurArme {
     }
 
     public boolean parer(int force) {
-        if(getDurability() == 0){
+        if(isWeaponBroken()){
             return this.soldat.parer(force);
         }
         this.durabilité--;

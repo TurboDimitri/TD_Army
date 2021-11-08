@@ -1,7 +1,6 @@
 class VisitorPrint implements Visitor{
 
-    int count = 0;
-
+    //On appelle récursivement la méthode sur tout les noeuds de l'arbre;
     public void visitArmy(Army army){
         for (SoldatWithWeapon soldier :army.troops){
             soldier.accept(this);
@@ -10,21 +9,19 @@ class VisitorPrint implements Visitor{
     public void visitSoldier(SoldatWithWeapon soldier){
         System.out.println(soldier);
     }
-
+    //On traite ici le cas des feuilles qui renvoient leurs méthodes toString(), modifiées pour renvoyer "Fantassin" ou "Cavalier"
     public void visitCavalier(ProxyCavalier cavalier){
-        System.out.println( " " + cavalier);
-        count++;
+        System.out.println(cavalier);
     }
     public void visitFantassin(ProxyFantassin fantassin){
-        System.out.println( " " + fantassin);
-        count++;
+        System.out.println(fantassin);
     }
-    
+    //Les prints parlent d'eux même je pense...
     public void report(){
-        System.out.println("déso pas de comptage");
+        System.out.println("T'es complètement maboul ma parole, ya rien à report ici");
     }
 
     public void reset(){
-        count = 0;
+        System.out.println("T'es complètement maboul ma parole, ya rien à reset ici");
     }
 }

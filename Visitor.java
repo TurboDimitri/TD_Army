@@ -4,6 +4,8 @@ interface Visitor {
 
     public void visitCavalier(ProxyCavalier cavalier);
     public void visitFantassin(ProxyFantassin fantassin);
+
+    //utile seulement pour VisitorCount (cf README.md)
     public void report();
     public void reset();
 
